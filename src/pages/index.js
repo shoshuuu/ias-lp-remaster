@@ -7,16 +7,26 @@ import CookiesPopup from "../components/cookies-popup";
 import Footer from "../components/footer";
 import Star from "../../static/images/star-bullet.svg";
 import { RequestDemoButton } from "../components/request-demo-button";
+import { ReviewCard } from "../components/review-card";
 
 const StarListItem = (props) => {
   return (
     <div className="get-started__list-item">
-      <img src={Star} alt="bullet" />
+      <StaticImage src={Star} alt="bullet" />
       <p>{props.text}</p>
     </div>
   );
 };
 
+const paths = {
+  // images: "../../static/images/",
+  // index: "../../static/images/index/"
+  // reviews: "../../static/images/index/reviews/",
+  avatars: "../../static/images/index/reviews/avatars/",
+  brandImages: "../../static/images/index/reviews/brand-images/",
+};
+
+console.log(__dirname);
 export default function Home() {
   return (
     <>
@@ -173,6 +183,21 @@ export default function Home() {
           <div className="reviews__slider-controls">
             {/*Добавить интерактивные стрелки слайдера здесь */}
           </div>
+        </div>
+        <div className="reviews__container">
+          <ReviewCard
+            avatar="../../static/images/reviews/avatars/avatar_careem.png"
+            reviewerInfo="Nupur R,
+            Senior Product Manager"
+            brandImage="../../static/images/reviews/brand-images/careem.png"
+            reviewText="New feature introduction, easy communication with the customers and a very high delivery rate against the usual push notifications. Plus, these are interactive, so it helps us increase engagement with the customer."
+          />
+          {/* <ReviewCard
+            avatar="../../static/images/index/reviews/avatars/"
+            reviewerInfo=""
+            brandImage="../../static/images/index/reviews/brand-images/"
+            reviewText=""
+          /> */}
         </div>
       </div>
       <Footer />
