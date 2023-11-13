@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../../static/images/logo.svg";
+import { SVG as Logo } from "../../static/images/logo.svg";
 import { Link } from "gatsby";
 
 export default function Navbar() {
   return (
     <div className="Navbar">
-      <img src={logo} alt="logo" className="Navbar__logo" />
+      <Logo />
       <div className="Navbar__navigation">
         <span className="Navbar__dropdown">
           <p>Solutions</p>

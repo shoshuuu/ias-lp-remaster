@@ -5,14 +5,15 @@ import { StaticImage } from "gatsby-plugin-image";
 import Navbar from "../components/navbar";
 import CookiesPopup from "../components/cookies-popup";
 import Footer from "../components/footer";
-import Star from "../../static/images/star-bullet.svg";
+import { SVG as Star } from "../../static/images/star-bullet.svg";
 import { RequestDemoButton } from "../components/request-demo-button";
 import { ReviewCard } from "../components/review-card";
+import { render } from "react-dom";
 
-const StarListItem = (props) => {
+const StarListItem = (props: { text: string }) => {
   return (
     <div className="get-started__list-item">
-      <StaticImage src={Star} alt="bullet" />
+      {/* <Star /> */}
       <p>{props.text}</p>
     </div>
   );
@@ -26,11 +27,10 @@ const paths = {
   brandImages: "../../static/images/index/reviews/brand-images/",
 };
 
-console.log(__dirname);
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="get-started">
         <h1 className="title">Full screen stories in your mobile app</h1>
@@ -185,19 +185,19 @@ export default function Home() {
           </div>
         </div>
         <div className="reviews__container">
-          <ReviewCard
+          {/* <ReviewCard
             avatar="../../static/images/reviews/avatars/avatar_careem.png"
             reviewerInfo="Nupur R,
             Senior Product Manager"
             brandImage="../../static/images/reviews/brand-images/careem.png"
             reviewText="New feature introduction, easy communication with the customers and a very high delivery rate against the usual push notifications. Plus, these are interactive, so it helps us increase engagement with the customer."
-          />
-          {/* <ReviewCard
-            avatar="../../static/images/index/reviews/avatars/"
-            reviewerInfo=""
-            brandImage="../../static/images/index/reviews/brand-images/"
-            reviewText=""
           /> */}
+          <ReviewCard
+            avatar="../../static/images/reviews/avatars/avatar_careem.png"
+            reviewerInfo="hi"
+            brandImage="../../static/images/reviews/brand-images/careem.png"
+            reviewText="hi"
+          />
         </div>
       </div>
       <Footer />
