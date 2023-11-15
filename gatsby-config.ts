@@ -19,7 +19,7 @@ function resolvePath(inputPath: string): string {
 
 const paths = {
   // images: __dirname + path.sep + `static` + path.sep + `images` + path.sep,
-  images: resolvePath(`${__dirname}\\static\\images\\`),
+  images: resolvePath(`${__dirname}/static/images/`),
 };
 
 module.exports = {
