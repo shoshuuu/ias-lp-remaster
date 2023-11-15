@@ -2,18 +2,28 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Navbar from "../components/navbar";
-import CookiesPopup from "../components/cookies-popup";
-import Footer from "../components/footer";
+import Navbar from "../components/essential/navbar";
+import CookiesPopup from "../components/essential/cookies-popup";
+import Footer from "../components/essential/footer";
 import { SVG as Star } from "../../static/images/star-bullet.svg";
-import { RequestDemoButton } from "../components/request-demo-button";
-import { ReviewCard } from "../components/review-card";
-import { render } from "react-dom";
+import { RequestDemoButton } from "../components/essential/request-demo-button";
+import { ReviewCard } from "../components/index/review-card";
 
 const StarListItem = (props: { text: string }) => {
   return (
     <div className="get-started__list-item">
-      {/* <Star /> */}
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 0C10 0 10 10 0 10C10 10 10 20 10 20C10 20 10 10 20 10C10 10 10 0 10 0Z"
+          fill="#0C62F3"
+        />
+      </svg>
       <p>{props.text}</p>
     </div>
   );
@@ -30,7 +40,7 @@ const paths = {
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
 
       <div className="get-started">
         <h1 className="title">Full screen stories in your mobile app</h1>
@@ -185,18 +195,12 @@ export default function Home() {
           </div>
         </div>
         <div className="reviews__container">
-          {/* <ReviewCard
+          <ReviewCard
             avatar="../../static/images/reviews/avatars/avatar_careem.png"
             reviewerInfo="Nupur R,
             Senior Product Manager"
             brandImage="../../static/images/reviews/brand-images/careem.png"
             reviewText="New feature introduction, easy communication with the customers and a very high delivery rate against the usual push notifications. Plus, these are interactive, so it helps us increase engagement with the customer."
-          /> */}
-          <ReviewCard
-            avatar="../../static/images/reviews/avatars/avatar_careem.png"
-            reviewerInfo="hi"
-            brandImage="../../static/images/reviews/brand-images/careem.png"
-            reviewText="hi"
           />
         </div>
       </div>
