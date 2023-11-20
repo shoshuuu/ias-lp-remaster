@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-
+// import Img from "gatsby-image"
 import Navbar from "../components/essential/navbar";
 import CookiesPopup from "../components/essential/cookies-popup";
 import Footer from "../components/essential/footer";
@@ -37,7 +38,7 @@ const paths = {
   brandImages: "../../static/images/index/reviews/brand-images/",
 };
 
-export default function Home() {
+export default function Home({ data }: any) {
   return (
     <>
       <Navbar />
@@ -195,6 +196,13 @@ export default function Home() {
           </div>
         </div>
         <div className="reviews__container">
+          <h1>GraphQl testing</h1>
+          {data.avatars.edges.map((image: any) => (
+            <div key={image.node.id}>
+              <Img fluid={image.node.childImageSharp.fluid} />
+              <p>{image.node.id}</p>
+            </div>
+          ))}
           <ReviewCard
             avatar="../../static/images/reviews/avatars/avatar_careem.png"
             reviewerInfo="Nupur R,
@@ -208,3 +216,26 @@ export default function Home() {
     </>
   );
 }
+
+export const avatarQuery = graphql`
+  query {
+    avatars: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "reviews/avatars" }
+      }
+    ) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`;

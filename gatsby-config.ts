@@ -17,8 +17,8 @@ function resolvePath(inputPath: string): string {
   });
 }
 
+//make sure to use only "/" slashes in yet unresolved paths
 const paths = {
-  // images: __dirname + path.sep + `static` + path.sep + `images` + path.sep,
   images: resolvePath(`${__dirname}/static/images/`),
 };
 
@@ -26,8 +26,17 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    //defaults config
+    //https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#customizing-the-default-options
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: "none",
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
