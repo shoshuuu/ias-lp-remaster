@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
-import CookiesPopup from "../components/essential/cookies-popup";
 import Layout from "../components/essential/layout";
 
-import { SVG as Star } from "../../static/images/star-bullet.svg";
 import { RequestDemoButton } from "../components/essential/request-demo-button";
 import { ReviewCard } from "../components/index/review-card";
+
+import "../styles/global.scss";
+import "../styles/index.scss";
 
 const StarListItem = (props: { text: string }) => {
   return (
@@ -25,7 +26,7 @@ const StarListItem = (props: { text: string }) => {
           fill="#0C62F3"
         />
       </svg>
-      <p>{props.text}</p>
+      <p className="get-started__item-text">{props.text}</p>
     </div>
   );
 };

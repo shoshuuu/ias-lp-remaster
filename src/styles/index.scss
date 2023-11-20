@@ -1,0 +1,21 @@
+.get-started {
+  margin-top: 83px;
+  text-align: center;
+  .title {
+  }
+  .narration {
+  }
+  &__features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__item-text {
+    margin-left: 0.5rem;
+  }
+}

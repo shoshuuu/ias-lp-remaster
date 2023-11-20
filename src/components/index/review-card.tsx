@@ -34,26 +34,3 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
     </div>
   );
 };
-
-export const avatarQuery = graphql`
-  query {
-    avatars: allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "reviews/avatars" }
-      }
-    ) {
-      edges {
-        node {
-          id
-          base
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`;
