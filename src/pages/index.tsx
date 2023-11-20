@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-// import Img from "gatsby-image"
-import Navbar from "../components/essential/navbar";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+
 import CookiesPopup from "../components/essential/cookies-popup";
-import Footer from "../components/essential/footer";
+import Layout from "../components/essential/layout";
+
 import { SVG as Star } from "../../static/images/star-bullet.svg";
 import { RequestDemoButton } from "../components/essential/request-demo-button";
 import { ReviewCard } from "../components/index/review-card";
@@ -31,18 +31,13 @@ const StarListItem = (props: { text: string }) => {
 };
 
 const paths = {
-  // images: "../../static/images/",
-  // index: "../../static/images/index/"
-  // reviews: "../../static/images/index/reviews/",
   avatars: "../../static/images/index/reviews/avatars/",
   brandImages: "../../static/images/index/reviews/brand-images/",
 };
 
 export default function Home({ data }: any) {
   return (
-    <>
-      <Navbar />
-
+    <Layout>
       <div className="get-started">
         <h1 className="title">Full screen stories in your mobile app</h1>
         <p className="narration">
@@ -199,7 +194,7 @@ export default function Home({ data }: any) {
           <h1>GraphQl testing</h1>
           {data.avatars.edges.map((image: any) => (
             <div key={image.node.id}>
-              <Img fluid={image.node.childImageSharp.fluid} />
+              {/* <GatsbyImage fluid={image.node.childImageSharp.fluid} /> */}
               <p>{image.node.id}</p>
             </div>
           ))}
@@ -212,8 +207,7 @@ export default function Home({ data }: any) {
           />
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }
 
