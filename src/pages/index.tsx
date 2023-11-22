@@ -10,6 +10,7 @@ import { ReviewCard } from "../components/index/review-card";
 
 import "../styles/global.scss";
 import "../styles/index.scss";
+import { calculateImageSizes } from "gatsby-plugin-image/dist/src/image-utils";
 
 const StarListItem = (props: { text: string }) => {
   return (
@@ -50,15 +51,23 @@ export default function Home({ data }: any) {
           <StarListItem text="Onboarding" />
           <StarListItem text="Short-form videos" />
         </div>
-        <Link className="button_filled" to="/sales">
-          Book a Meeting
-        </Link>
+        <div className="button-container">
+          <Link className="button-filled" id="book-meeting" to="/sales">
+            Book a Meeting
+          </Link>
+        </div>
       </div>
 
-      <StaticImage
-        src="../../static/images/index/stories-look-example.png"
-        alt="stories example"
-      />
+      <div className="stories-look">
+        <StaticImage
+          className="stories-look__example"
+          src="../../static/images/index/stories-look-example.png"
+          alt="stories example"
+          layout="fixed"
+          width={1471}
+          height={586}
+        />
+      </div>
 
       <div className="partnerships">{/* swiper or another slider */}</div>
 
