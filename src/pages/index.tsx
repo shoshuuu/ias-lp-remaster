@@ -71,8 +71,8 @@ export default function Home({ data }: any) {
 
       <div className="partnerships">{/* swiper or another slider */}</div>
 
-      <div className="marketing-goals">
-        <h2 className="subtitle">
+      <div className="marketing-goals container">
+        <h2 className="marketing-goals__subtitle subtitle">
           Solve multiple in-app marketing goals via a single platform
         </h2>
         <p className="narration">
@@ -87,20 +87,22 @@ export default function Home({ data }: any) {
       </div>
 
       <div className="features">
-        <h2 className="subtitle">
-          The content platform your team and customers will love
-        </h2>
-        <p className="narration">
-          InAppStory provides a multipurpose solution for medium businesses and
-          enterprise firms to deliver the content that resonates with mobile
-          users.
-        </p>
+        <div className="features__title-block">
+          <h2 className="subtitle ">
+            The content platform your team and customers will love
+          </h2>
+          <p className="narration">
+            InAppStory provides a multipurpose solution for medium businesses
+            and enterprise firms to deliver the content that resonates with
+            mobile users.
+          </p>
+        </div>
 
         <div className="features__items">
           <div className="feature">
-            <div className="feature__img-container">
+            <div className="img-container">
               <StaticImage
-                src="../../static/images/index/features/editor.png"
+                src="../../static/images/index/editor.png"
                 alt="intuitive editor console"
               />
             </div>
@@ -115,13 +117,13 @@ export default function Home({ data }: any) {
             </div>
           </div>
           <div className="feature_reversed">
-            <div className="feature__img-container">
+            <div className="img-container">
               <StaticImage
-                src="../../static/images/index/features/publishing.png"
+                src="../../static/images/index/publishing.png"
                 alt="publishing"
               />
             </div>
-            <div className="feature__text-container">
+            <div className="feature_reversed__text-container">
               <h3 className="subtitle3">Broad publishing settings</h3>
               <p className="narration">
                 Easily target and personalize Stories app features via audience
@@ -133,7 +135,7 @@ export default function Home({ data }: any) {
           <div className="feature">
             <div className="feature__img-container">
               <StaticImage
-                src="../../static/images/index/features/widgets.png"
+                src="../../static/images/index/widgets.png"
                 alt="widgets"
               />
             </div>
@@ -150,11 +152,11 @@ export default function Home({ data }: any) {
           <div className="feature_reversed">
             <div className="feature__img-container">
               <StaticImage
-                src="../../static/images/index/features/analytics.png"
+                src="../../static/images/index/analytics.png"
                 alt="analytics"
               />
             </div>
-            <div className="feature__text-container">
+            <div className="feature_reversed__text-container">
               <h3 className="subtitle3">Insightful analytical tools</h3>
               <p className="narration">
                 Track Stories and user behavior metrics from the online
@@ -168,27 +170,31 @@ export default function Home({ data }: any) {
       </div>
 
       <div className="stats">
-        <h2 className="title">Influence customers behaviour in a native way</h2>
-        <div className="stats__wrapper">
-          <div className="stat-container">
-            <p className="title">10m+</p>
-            <p className="narration">Total daily impacts</p>
-            <div className="separator"></div>
-          </div>
-          <div className="stat-container">
-            <p className="title">20%</p>
-            <p className="narration">Average engagement rate</p>
-            <div className="separator"></div>
-          </div>
-          <div className="stat-container">
-            <p className="title">x3</p>
-            <p className="narration">Better conversion vs. banners</p>
-            <div className="separator"></div>
-          </div>
-          <div className="stat-container">
-            <p className="title">2min+</p>
-            <p className="narration">Average increase in user sessions</p>
-            <div className="separator"></div>
+        <div className="container">
+          <h2 className="title">
+            Influence customers behaviour in a native way
+          </h2>
+          <div className="stats__wrapper">
+            <div className="stat-container">
+              <p className="title">10m+</p>
+              <p className="narration">Total daily impacts</p>
+              <div className="separator"></div>
+            </div>
+            <div className="stat-container">
+              <p className="title">20%</p>
+              <p className="narration">Average engagement rate</p>
+              <div className="separator"></div>
+            </div>
+            <div className="stat-container">
+              <p className="title">x3</p>
+              <p className="narration">Better conversion vs. banners</p>
+              <div className="separator"></div>
+            </div>
+            <div className="stat-container">
+              <p className="title">2min+</p>
+              <p className="narration">Average increase in user sessions</p>
+              <div className="separator"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -196,11 +202,11 @@ export default function Home({ data }: any) {
       <div className="reviews">
         <div className="reviews__top-panel">
           <h3 className="subtitle3">What our clients say?</h3>
+        </div>
+        <div className="reviews__container">
           <div className="reviews__slider-controls">
             {/*Добавить интерактивные стрелки слайдера здесь */}
           </div>
-        </div>
-        <div className="reviews__container">
           <h1>GraphQl testing</h1>
           {data.avatars.edges.map((image: any) => (
             <div key={image.node.id}>

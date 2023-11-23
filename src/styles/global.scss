@@ -21,14 +21,22 @@ header {
   // display: flex;
   align-content: center;
   position: sticky;
-  background-color: white;
   z-index: 100;
 }
 
 //custom elements
 .title {
   font-size: 2.625rem;
+  font-weight: 800;
   line-height: 2.75rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.subtitle3 {
+  font-size: 1.5rem;
 }
 
 .narration {
@@ -45,6 +53,8 @@ header {
   display: flex;
   position: fixed;
   justify-content: space-between;
+  background-color: $color-bg-light;
+
   // max-width: 1680px;
   // margin-left: auto;
   // margin-right: auto;
@@ -140,4 +150,36 @@ header {
 
 .button-filled {
   @include button-filled;
+}
+.request-demo-button {
+  .button-filled {
+    margin-right: 1rem;
+  }
+  .request-demo {
+    color: #fff;
+    font-weight: 800;
+  }
+}
+
+// @media (min-width: 1024px) {
+//   .container {
+//     max-width: 1024px;
+//   }
+// }
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 768px;
+//   }
+// }
+// @media (min-width: 640px) {
+//   .container {
+//     max-width: 640px;
+//   }
+// }
+
+.container {
+  @include auto-indent;
+  display: flex;
+  flex-direction: column;
+  // white-space: nowrap;
 }

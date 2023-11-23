@@ -1,9 +1,11 @@
+@import "./assets/variables.scss";
+@import "./assets/mixins.scss";
 .get-started {
-  margin-top: 83px;
+  margin-top: 5.5rem;
   text-align: center;
   .title {
     letter-spacing: 0.01rem;
-    // -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
   }
   .narration {
     letter-spacing: 0.01rem;
@@ -58,4 +60,136 @@
     // right: 0;
     // margin: auto;
   }
+}
+
+.marketing-goals {
+  max-width: 1280px;
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+}
+
+.marketing-slider {
+  height: 80vh;
+  background-color: $color-primary;
+}
+
+.features {
+  padding-top: 140px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p,
+  h2,
+  h3 {
+    color: #fff;
+  }
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 55px;
+    h2 {
+      margin-bottom: 28px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__items {
+    // @include auto-indent;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 123px;
+    }
+
+    .feature,
+    .feature_reversed {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20p;
+      &__text-container {
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .subtitle3,
+        .narration {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .feature_reversed {
+      flex-direction: row-reverse;
+      &__text-container {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+    .feature {
+      &__text-container {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.stats {
+  background-color: $color-primary;
+  padding: 108px 0;
+
+  .container {
+    max-width: 1280px;
+    .title {
+      margin-bottom: 56px;
+    }
+  }
+  h2,
+  p {
+    color: #fff;
+  }
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .stat-container {
+      width: 25%;
+      .title {
+        margin-bottom: 7px;
+      }
+      .narration {
+        margin-bottom: 20px;
+        padding-bottom: 23px;
+      }
+      .separator {
+        width: 100%;
+        height: 1px;
+        // overflow: visible;
+        // position: relative;
+        background-color: hsla(0, 0%, 100%, 0.2);
+      }
+    }
+  }
+}
+
+.reviews {
+  overflow: hidden;
+  background: linear-gradient(#0c62f3, #0c62f3 153px, $lightgray 0, $lightgray);
+  text-align: left;
 }

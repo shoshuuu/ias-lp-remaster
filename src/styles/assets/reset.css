@@ -90,6 +90,12 @@ video {
   font-size: 100%;
   vertical-align: baseline;
 }
+div {
+  /* border: none !important; */
+  /* background-color: red; */
+}
+
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
