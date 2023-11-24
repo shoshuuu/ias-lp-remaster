@@ -2,6 +2,7 @@
 @import "./assets/variables.scss";
 @import "./assets/mixins.scss";
 
+
 //layout style
 * {
   // font-family: "TTCommons", Arial, sans-serif;
@@ -12,16 +13,26 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+.layout {
+  width: 100%;
+}
+
+.content {
+  // margin-top: 83px;
+  position: relative;
+}
 
 //native elements
 
 header {
   height: 70px;
-  top: 0;
-  // display: flex;
-  align-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   position: sticky;
+  top: 0;
   z-index: 100;
+  background-color: $color-bg-light;
 }
 
 //custom elements
@@ -45,32 +56,22 @@ header {
 }
 
 .Navbar {
-  padding: 0 30px;
-  margin: 0 3.5px;
   box-sizing: border-box;
   width: 100%;
   height: inherit;
   display: flex;
   position: fixed;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $color-bg-light;
 
-  // max-width: 1680px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  // display: flex;
-  // -webkit-box-orient: horizontal;
-  // -webkit-box-direction: normal;
-  // -ms-flex-direction: row;
-  // flex-direction: row;
-  // height: 70px;
-  // -webkit-box-align: center;
-  // -ms-flex-align: center;
-  // align-items: center;
-  // padding-left: 1rem;
-  // padding-right: 1rem;
+  &__container {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1680px;
+  }
 
   &__list {
     width: 100%;
@@ -183,3 +184,5 @@ header {
   flex-direction: column;
   // white-space: nowrap;
 }
+
+
