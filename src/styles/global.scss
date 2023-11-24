@@ -151,6 +151,57 @@ header {
   }
 }
 
+.Footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+
+  &__container {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__follow-us {
+    margin-top: 0.5rem;
+    p {
+      margin-right: 2rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  &__language {
+    color: $color-primary;
+    margin-right: 0.5rem;
+  }
+  &__main {
+    display: flex;
+    flex-direction: row;
+  }
+  &__col {
+    margin-right: 120px;
+  }
+  &__col-header {
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: $darkgray;
+  }
+  &__col-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    a {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.separator {
+  height: 72px;
+  width: 100%;
+  display: block;
+}
+
 .button-filled {
   @include button-filled;
 }
