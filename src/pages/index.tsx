@@ -106,16 +106,20 @@ export default function Home({ data }: any) {
           />
         </div>
 
-        <div className="partnerships">{/* swiper or another slider */}</div>
+        <div className="partnerships placeholder">
+          <div className="slider"></div>
+        </div>
 
-        <div className="marketing-goals container">
-          <h2 className="marketing-goals__subtitle subtitle">
-            Solve multiple in-app marketing goals via a single platform
-          </h2>
-          <p className="narration">
-            The Stories feature enhances mobile customer experience across
-            acquisition, onboarding, conversion, and retention touchpoints.
-          </p>
+        <div className="marketing-goals placeholder">
+          <div className="marketing-goals__container">
+            <h2 className="marketing-goals__subtitle subtitle">
+              Solve multiple in-app marketing goals via a single platform
+            </h2>
+            <p className="narration">
+              The Stories feature enhances mobile customer experience across
+              acquisition, onboarding, conversion, and retention touchpoints.
+            </p>
+          </div>
         </div>
 
         <div className="marketing-slider">
@@ -241,7 +245,7 @@ export default function Home({ data }: any) {
           <div className="reviews__top-panel">
             <h3 className="subtitle3">What our clients say?</h3>
           </div>
-          <div className="reviews__container">
+          <div className="reviews__container placeholder">
             <div className="reviews__slider-controls">
               {/*Добавить интерактивные стрелки слайдера здесь */}
             </div>
@@ -321,8 +325,109 @@ export default function Home({ data }: any) {
           </div>
         </div>
 
+        <div className="media-about-us placeholder">
+          <div className="media-about-us__container"></div>
+        </div>
+
         <div className="how-it-works">
-          <div className="how-it-works__container"></div>
+          <div className="how-it-works__container">
+            <h2 className="subtitle">Let's start with in app Stories?</h2>
+            <div className="steps">
+              <div className="steps__step-campaign">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="52"
+                  viewBox="0 0 50 52"
+                  fill="none"
+                >
+                  <path
+                    d="M18.75 20.7969C18.75 19.1367 17.2852 17.6719 15.625 17.6719H14.0625C10.5469 17.6719 7.8125 20.5039 7.8125 23.9219V28.6094C7.8125 32.125 10.5469 34.8594 14.0625 34.8594H15.625C17.2852 34.8594 18.75 33.4922 18.75 31.7344V20.7969ZM35.9375 34.8594C39.3555 34.8594 42.1875 32.125 42.1875 28.6094V23.9219C42.1875 20.5039 39.3555 17.6719 35.9375 17.6719H34.375C32.6172 17.6719 31.25 19.1367 31.25 20.7969V31.7344C31.25 33.4922 32.6172 34.8594 34.375 34.8594H35.9375ZM25 0.484375C11.0352 0.484375 0.390625 12.1055 0 25.4844V27.0469C0 27.9258 0.683594 28.6094 1.5625 28.6094H3.125C3.90625 28.6094 4.6875 27.9258 4.6875 27.0469V25.4844C4.6875 14.3516 13.7695 5.17188 25 5.17188C36.1328 5.17188 45.3125 14.3516 45.3125 25.4844H45.2148C45.2148 25.7774 45.3125 41.6953 45.3125 41.6953C45.3125 44.0391 43.457 45.7969 41.1133 45.7969H31.25C31.25 43.2578 29.1016 41.1094 26.5625 41.1094H23.4375C20.8008 41.1094 18.75 43.2578 18.75 45.7969C18.75 48.4336 20.8008 50.4844 23.4375 50.4844H41.1133C45.9961 50.4844 50 46.5782 50 41.6953V25.4844C49.5117 12.1055 38.8672 0.484375 25 0.484375Z"
+                    fill="#0C62F3"
+                  />
+                </svg>
+                <p className="subtitle3">
+                  <span>Request a personalized demo</span>
+                </p>
+                <p className="narration">
+                  Have a quick call with us to see the full capabilities of the
+                  Stories console. Learn how to launch Stories directly to your
+                  app or mobile web based on your business needs, analyze
+                  conversion. Get tips and leads on how to improve efficiency.
+                </p>
+              </div>
+
+              <div className="steps__step-campaign">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="38"
+                  height="52"
+                  viewBox="0 0 38 52"
+                  fill="none"
+                >
+                  <path
+                    d="M31.25 3.60938C31.25 1.94922 29.7852 0.484375 28.125 0.484375C26.3672 0.484375 25 1.94922 25 3.60938V12.9844H31.25V3.60938ZM35.9375 16.1094H1.5625C0.683594 16.1094 0 16.8906 0 17.6719V20.7969C0 21.6758 0.683594 22.3594 1.5625 22.3594H3.125V25.4844C3.125 32.6133 8.69141 39.4492 15.625 40.8164V50.4844H21.875V40.8164C28.7109 39.4492 34.2773 32.6133 34.375 25.4844V22.3594H35.9375C36.7188 22.3594 37.5 21.6758 37.5 20.7969V17.6719C37.5 16.8906 36.7188 16.1094 35.9375 16.1094ZM12.5 3.60938C12.5 1.94922 11.0352 0.484375 9.375 0.484375C7.61719 0.484375 6.25 1.94922 6.25 3.60938V12.9844H12.5V3.60938Z"
+                    fill="#0C62F3"
+                  />
+                </svg>
+                <p className="subtitle3">
+                  <span>Integrate SDK</span>
+                </p>
+                <p className="narration">
+                  Select a tariff plan and integrate the SDK into an app or
+                  mobile web. You are ready to start campaigns anytime now.{" "}
+                </p>
+              </div>
+
+              <div className="steps__step-campaign">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="52"
+                  viewBox="0 0 50 52"
+                  fill="none"
+                >
+                  <path
+                    d="M49.3164 2.43749C49.1211 1.85157 48.6328 1.36329 48.0469 1.16797C44.9219 0.484375 42.4805 0.484375 40.0391 0.484375C29.9805 0.484375 23.9258 5.95312 19.4336 12.9844H9.17969C7.61719 13.0821 5.76172 14.1563 4.98047 15.6211L0.195312 25.2891C0.0976562 25.5821 0 25.9727 0 26.2656C0 27.6328 0.976562 28.6094 2.34375 28.6094H12.4023L10.2539 30.8555C9.08203 31.9297 8.98438 33.9805 10.2539 35.25L15.2344 40.2305C16.3086 41.3047 18.3594 41.5 19.6289 40.2305L21.7773 38.0821V48.1406C21.875 49.5078 22.8516 50.4844 24.2188 50.4844C24.5117 50.4844 24.9023 50.3867 25.1953 50.2891L34.8633 45.5039C36.3281 44.7227 37.4023 42.8672 37.4023 41.3047V31.0508C44.5312 26.5586 49.9023 20.5039 49.9023 10.4453C50 8.00391 50 5.5625 49.3164 2.43749ZM37.5 16.8906C35.2539 16.8906 33.5938 15.2305 33.5938 12.9844C33.5938 10.836 35.2539 9.07812 37.5 9.07812C39.6484 9.07812 41.4062 10.836 41.4062 12.9844C41.4062 15.2305 39.6484 16.8906 37.5 16.8906Z"
+                    fill="#0C62F3"
+                  />
+                </svg>
+                <p className="subtitle3">
+                  <span>Launch your first Stories</span>
+                </p>
+                <p className="narration">
+                  Publish Stories carousel or use in-app Stories as onboarding.
+                  Hit us up 24/7 for any questions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="get-demo">
+          <div className="get-demo__container">
+            <div className="get-demo__description">
+              <h2 className="subtitle">
+                Extend the life cycle of your mobile customers
+              </h2>
+              <p className="narration">
+                Get familiar with the InAppStory app Stories building platform
+                by exploring it in demo mode
+              </p>
+            </div>
+            <div className="get-demo__form-container">
+              <div className="form">
+                <input
+                  type="email"
+                  placeholder="Your work e-mail address"
+                  className="form__input"
+                />
+                <Link to="/sales" className="button-filled form__button">
+                  Get started
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

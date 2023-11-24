@@ -2,7 +2,6 @@
 @import "./assets/variables.scss";
 @import "./assets/mixins.scss";
 
-
 //layout style
 * {
   // font-family: "TTCommons", Arial, sans-serif;
@@ -12,6 +11,9 @@
   color: $color-text-primary;
   text-decoration: none;
   box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
 }
 .layout {
   width: 100%;
@@ -185,4 +187,6 @@ header {
   // white-space: nowrap;
 }
 
-
+.placeholder {
+  @include placeholder;
+}
