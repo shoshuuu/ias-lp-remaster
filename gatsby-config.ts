@@ -23,7 +23,7 @@ const paths = {
 };
 
 module.exports = {
-  pathPrefix: "/ias",
+  pathPrefix: "/ias-lp-remaster",
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

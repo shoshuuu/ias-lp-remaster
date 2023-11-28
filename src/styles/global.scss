@@ -17,6 +17,7 @@
 }
 .layout {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .content {
@@ -30,7 +31,7 @@ header {
   height: 70px;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   position: sticky;
   top: 0;
   z-index: 100;
