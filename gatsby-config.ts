@@ -23,6 +23,7 @@ const paths = {
 };
 
 module.exports = {
+  pathPrefix: "/ias",
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
