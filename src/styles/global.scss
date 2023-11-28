@@ -11,17 +11,30 @@
   color: $color-text-primary;
   text-decoration: none;
   box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+.layout {
+  width: 100%;
+}
+
+.content {
+  // margin-top: 83px;
+  position: relative;
 }
 
 //native elements
 
 header {
   height: 70px;
-  top: 0;
-  // display: flex;
-  align-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   position: sticky;
+  top: 0;
   z-index: 100;
+  background-color: $color-bg-light;
 }
 
 //custom elements
@@ -45,32 +58,22 @@ header {
 }
 
 .Navbar {
-  padding: 0 30px;
-  margin: 0 3.5px;
   box-sizing: border-box;
   width: 100%;
   height: inherit;
   display: flex;
   position: fixed;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $color-bg-light;
 
-  // max-width: 1680px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  // display: flex;
-  // -webkit-box-orient: horizontal;
-  // -webkit-box-direction: normal;
-  // -ms-flex-direction: row;
-  // flex-direction: row;
-  // height: 70px;
-  // -webkit-box-align: center;
-  // -ms-flex-align: center;
-  // align-items: center;
-  // padding-left: 1rem;
-  // padding-right: 1rem;
+  &__container {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1680px;
+  }
 
   &__list {
     width: 100%;
@@ -148,6 +151,57 @@ header {
   }
 }
 
+.Footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+
+  &__container {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__follow-us {
+    margin-top: 0.5rem;
+    p {
+      margin-right: 2rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  &__language {
+    color: $color-primary;
+    margin-right: 0.5rem;
+  }
+  &__main {
+    display: flex;
+    flex-direction: row;
+  }
+  &__col {
+    margin-right: 120px;
+  }
+  &__col-header {
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: $darkgray;
+  }
+  &__col-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    a {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.separator {
+  height: 72px;
+  width: 100%;
+  display: block;
+}
+
 .button-filled {
   @include button-filled;
 }
@@ -182,4 +236,8 @@ header {
   display: flex;
   flex-direction: column;
   // white-space: nowrap;
+}
+
+.placeholder {
+  @include placeholder;
 }
