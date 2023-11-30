@@ -40,14 +40,14 @@ const AwardStars = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_4394_43797)">
+      <g clipPath="url(#clip0_4394_43797)">
         <path
           d="M9.33075 2.69809L7.06338 7.29531L1.99047 8.03489C1.08075 8.16684 0.716162 9.28836 1.37588 9.93073L5.04602 13.5071L4.17797 18.5592C4.02172 19.4724 4.98352 20.1564 5.78908 19.7293L10.3273 17.3439L14.8655 19.7293C15.671 20.1529 16.6328 19.4724 16.4766 18.5592L15.6085 13.5071L19.2787 9.93073C19.9384 9.28836 19.5738 8.16684 18.6641 8.03489L13.5912 7.29531L11.3238 2.69809C10.9176 1.87864 9.74047 1.86822 9.33075 2.69809Z"
           fill="#0D6EFD"
           stroke="#0D6EFD"
-          stroke-width="0.0694444"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="0.0694444"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
@@ -251,13 +251,7 @@ export default function Home({ data }: any) {
             </div>
             {/* <h1>GraphQl testing</h1> */}
 
-            <ReviewCard
-              avatar="../../static/images/reviews/avatars/avatar_careem.png"
-              reviewerInfo="Nupur R,
-            Senior Product Manager"
-              brandImage="../../static/images/reviews/brand-images/careem.png"
-              reviewText="New feature introduction, easy communication with the customers and a very high delivery rate against the usual push notifications. Plus, these are interactive, so it helps us increase engagement with the customer."
-            />
+            <ReviewCard />
           </div>
         </div>
 
